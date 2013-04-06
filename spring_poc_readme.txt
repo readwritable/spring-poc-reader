@@ -23,11 +23,6 @@ spring-poc/lib/
 cd ~/downloads/commons-logging-1.1.1/
 cp -p commons-logging-1.1.1.jar spring-poc/lib/
 
-# Set classpath environment
-export JAVA_HOME=/usr/java/default
-export SPRING_LIB=/home/leo/jstuff/spring-poc/lib/*
-export CLASSPATH=.:$SPRING_LIB:$CLASSPATH
-
 ----
 
 # To compile:
