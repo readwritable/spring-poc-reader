@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+  <bean id="placeholderConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="location" value="classpath:myreader-beans.properties" />
+  </bean>
+  <bean name="myReaderService" class="com.genuine.poc.spring.reader.MyReaderService">
+    <constructor-arg ref="myFileReader"/>
+    <!--
+    <property name="reader" ref="myFtpReader"/>
+    <property name="reader" ref="myDatabaseReader"/>
+    -->
+  </bean>
+  <bean name="myFileReader" class="com.genuine.poc.spring.reader.MyFileReader">
+    <constructor-arg value="${file-name}"/>
+  </bean>
+  <!--
+  <bean name="myFtpReader" class="com.genuine.poc.spring.reader.MyFtpReader">
+    <property name="ftpHost" value="${ftp-host}" />
+    <property name="ftpPort" value="${ftp-port}" />
+  </bean>
+  <bean name="myDatabaseReader" class="com.genuine.poc.spring.reader.MyDatabaseReader">
+    <property name="dataSource" ref="${mysql-ds}" />
+  </bean>
+  -->
+
+</beans>
+

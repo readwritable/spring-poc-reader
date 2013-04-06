@@ -1,0 +1,7 @@
+This is myfile's line 1.
+This is myfile's line 2.
+This is myfile's line 3.
+This is myfile's line 4.
+This is myfile's line 5.
+End of myfile.
+
