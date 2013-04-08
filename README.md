@@ -5,5 +5,5 @@
 
 # To run:
 * cd spring-poc
-* java -cp build/spring-reader-r1.0.0.jar:.:lib/* com.genuine.poc.spring.reader.MyReaderClient
+* java -cp build/spring-reader-r1.0.0.jar:.:lib/* springreader.MyReaderClient
 
